@@ -1,9 +1,11 @@
+## This code assumes the unzipped file - 'household_power_consumption.txt' exists in the same location as the R code
+
 install.packages("sqldf")
 library(sqldf)
 
 ## Selecting data from the dates 2007-02-01 and 2007-02-02
 sql <- "SELECT * from file WHERE Date = '1/2/2007' OR Date = '2/2/2007'"
-data <- read.csv2.sql("./Data/household_power_consumption.txt", sql)
+data <- read.csv2.sql("household_power_consumption.txt", sql)
 
 ## Converting dates
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
