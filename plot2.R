@@ -13,7 +13,7 @@ datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
 ## Open plot2.png
-png("plot2.png", height = 480, width = 480)
+png("plot2.png", bg = "transparent", height = 480, width = 480)
 
 ## Plot 2
 plot(data$Global_active_power~SSDateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
