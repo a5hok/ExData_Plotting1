@@ -13,7 +13,7 @@ datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
 ## Open plot4.png
-png("plot4.png", height = 480, width = 480)
+png("plot4.png", bg = "transparent", height = 480, width = 480)
 
 # multiplot
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
