@@ -13,7 +13,7 @@ datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
 ## Open plot3.png
-png("plot3.png", height = 480, width = 480)
+png("plot3.png", bg = "transparent", height = 480, width = 480)
 with(data, {
     plot(Sub_metering_1~Datetime, type="l", ylab="Energy sub metering", xlab="", col='black')
     lines(Sub_metering_2~Datetime, col='red')
